@@ -66,7 +66,7 @@ const Capacities = [
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => {
-    document.title = " Detail GT3 RS - Porsche By Ezar Satria P";
+    document.title = " Detail 911 Turbo S - Porsche By Ezar Satria P";
     let link = document.querySelector("link[rel~='icon']");
     if (!link) {
       link = document.createElement("link");

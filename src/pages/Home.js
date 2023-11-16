@@ -1,4 +1,4 @@
-import { ReactDOM, NavLink } from "react-dom";
+import { NavLink } from "react-router-dom";
 import "../index";
 import Navbar from "./component/nav";
 import Footer from "./component/footer";
@@ -50,12 +50,14 @@ export default function Example() {
           <h1 className="max-w-screen-sm text-xxl font-porsche font-semibold tracking-wide">
             The Thrill of Driving Perfection
           </h1>
-          <button
-            className="w-fit px-6 py-2 outline outline-offset-2 outline-2 text-base font-porsche font-semibold hover:bg-gray-200 rounded-sm"
-            type="button"
-          >
-            The 911. Starting at $90,900
-          </button>
+          <a href="/Models">
+            <button
+              className="w-fit px-6 py-2 outline outline-offset-2 outline-2 text-base font-porsche font-semibold hover:bg-gray-200 rounded-sm"
+              type="button"
+            >
+              The 911. Starting at $90,900
+            </button>
+          </a>
         </div>
       </div>
       <div className="relative isolate px-10 md:px-20 lg:px-20">
@@ -75,28 +77,28 @@ export default function Example() {
           </a>
           <a
             href="#"
-            className="relative rounded-lg w-full lg:w-96 overflow-hidden hover:drop-shadow-3xl"
+            className="relative rounded-lg w-full h-64 lg:w-96 overflow-hidden hover:drop-shadow-3xl"
           >
             <img
               className="object-cover w-full"
-              src={process.env.PUBLIC_URL + "/assets/img/news1.jpg"}
+              src="https://images-porsche.imgix.net/-/media/DBB98D8760094E54868B18C9BFCC820B_7666EFF4F31C44BA9612E2061A007827_PCNA---E3-II-Base---03?w=1800&q=85&crop=faces%2Centropy%2Cedges&auto=format"
               alt="Porsche 911 Le Mans"
             />
             <h3 className="absolute font-porsche font-semibold bottom-0 left-0 px-4 py-2 sm:px-6 sm:py-4  text-white">
-              Porsche 911 Le Mans
+              Discover the Cayenne.
             </h3>
           </a>
           <a
             href="#"
-            className="relative rounded-lg w-full lg:w-96 overflow-hidden hover:drop-shadow-3xl"
+            className="relative rounded-lg w-full h-64 lg:w-96 overflow-hidden hover:drop-shadow-3xl"
           >
             <img
               className="object-cover w-full"
-              src={process.env.PUBLIC_URL + "/assets/img/news1.jpg"}
+              src="https://images-porsche.imgix.net/-/media/580A0453E180424E8E1702D215E23C0E_9CDB20167D1F4C15B7DF202A908670A8_2023---KW40---PCNA---Rennsport-Reunion?w=1800&q=85&crop=faces%2Centropy%2Cedges&auto=format"
               alt="Porsche 911 Le Mans"
             />
             <h3 className="absolute font-porsche font-semibold bottom-0 left-0 px-4 py-2 sm:px-6 sm:py-4 text-white">
-              Porsche 911 Le Mans
+              Look Back on RR7.
             </h3>
           </a>
         </div>
