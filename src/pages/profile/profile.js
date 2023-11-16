@@ -57,17 +57,23 @@ export default function Example() {
                   />
                 </div>
               </div>
+              <div class="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center">
+                <button class="text-white py-1 px-4 uppercase rounded bg-black hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
+                  Edit
+                </button>
+              </div>
             </div>
 
             <div class="mt-20 text-center border-b pb-12">
               <h1 class="text-4xl font-medium text-gray-700">
-                Ezar Satria Pramana <span class="font-light text-gray-500">19</span>
+                Ezar Satria Pramana{" "}
+                <span class="font-light text-gray-500">19</span>
               </h1>
-              <p class="font-light text-gray-600 mt-3">Purwokerto, Jawa Tengah</p>
-
-              <p class="mt-8 text-gray-500">
-                2203040104
+              <p class="font-light text-gray-600 mt-3">
+                Purwokerto, Jawa Tengah
               </p>
+
+              <p class="mt-8 text-gray-500">2203040104</p>
               <p class="mt-2 text-gray-500">Teknik Informatika</p>
             </div>
 

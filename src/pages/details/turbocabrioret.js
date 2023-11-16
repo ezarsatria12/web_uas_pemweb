@@ -3,6 +3,12 @@ import "../../index";
 import Navbar from "../component/detailnav";
 import Footer from "../component/footer";
 import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+} from "react-share";
+import {
   useState,
   link,
   StyleSheet,
@@ -357,6 +363,22 @@ export default function Example() {
               >
                 Test Drive
               </button>
+            </div>
+            <div className="flex my-4 gap-2">
+              <FacebookShareButton
+                url={"https://www.example.com"}
+                quote={"Dummy text!"}
+                hashtag="#muo"
+              >
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+              <TwitterShareButton
+                url={"https://www.example.com"}
+                quote={"Dummy text!"}
+                hashtag="#muo"
+              >
+                <TwitterIcon size={32} round />
+              </TwitterShareButton>
             </div>
           </div>
           <div className="">
