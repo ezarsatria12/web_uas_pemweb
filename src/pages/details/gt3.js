@@ -24,6 +24,7 @@ import {
 } from "react";
 import { Accordion } from "flowbite-react";
 import { LinkIcon } from "@heroicons/react/24/outline";
+import allPorscheModels from "../Product";
 const motors = [
   {
     id: 1,
@@ -64,7 +65,10 @@ const Capacities = [
   },
 ];
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+  function handleclick() {
+    setIndex(index + 1);
+  }
   useEffect(() => {
     document.title = " Detail GT3 RS - Porsche By Ezar Satria P";
     let link = document.querySelector("link[rel~='icon']");
@@ -189,12 +193,12 @@ export default function Example() {
         <h1 className="font-porsche font-semibold text-5xl tracking-wide">
           The 911 GT3.
         </h1>
-        <div className="grid grid-cols-3 gap-x-20 w-fit text-base font-porsche font-normal ">
-          <p>$197,200</p>
-          <p>518 hp</p>
-          <p>296 kmh</p>
-        </div>
-        <div className="my-8 grid grid-cols-2 justify-between">
+          <div className="grid grid-cols-3 gap-x-20 w-fit text-base font-porsche font-normal ">
+            <p>$197,200</p>
+            <p>518 hp</p>
+            <p>296 kmh</p>
+          </div>
+         <div className="my-8 grid grid-cols-2 justify-between">
           <div className="">
             <h1 className="font-porsche font-semibold text-4xl tracking-wide my-5">
               Technical Specs
@@ -370,12 +374,13 @@ export default function Example() {
               >
                 Build Your Porsche
               </button>
-              <button
-                className="w-fit px-6 py-2 my-6 text-white bg-gray-400  hover:bg-gray-200 text-base font-porsche font-semibold rounded-sm"
+              <button 
+                onClick={handleclick} className="w-fit px-6 py-2 my-6 text-white bg-gray-400  hover:bg-gray-200 text-base font-porsche font-semibold rounded-sm"
                 type="button"
               >
                 Test Drive
               </button>
+              <h2>({index + 1})</h2>
             </div>
             <div className="flex my-4 gap-2">
               <FacebookShareButton

@@ -64,7 +64,10 @@ const Capacities = [
   },
 ];
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+  function handleclick() {
+    setIndex(index + 1);
+  }
   useEffect(() => {
     document.title = " Detail GT3 RS - Porsche By Ezar Satria P";
     let link = document.querySelector("link[rel~='icon']");
@@ -376,11 +379,13 @@ export default function Example() {
                 Build Your Porsche
               </button>
               <button
+                onClick={handleclick}
                 className="w-fit px-6 py-2 my-6 text-white bg-gray-400  hover:bg-gray-200 text-base font-porsche font-semibold rounded-sm"
                 type="button"
               >
                 Test Drive
               </button>
+              <h2>({index + 1})</h2>
             </div>
             <div className="flex my-4 gap-2">
               <FacebookShareButton

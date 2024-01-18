@@ -64,7 +64,7 @@ export default function Example() {
         <div className="cardcontainer flex flex-col lg:flex-row  justify-between py-8 sm:py-40 lg:px-16">
           <a
             href="#"
-            className="relative rounded-lg w-full lg:w-96 overflow-hidden h-auto hover:drop-shadow-3xl"
+            className="relative rounded-lg w-full h-64 lg:w-96 overflow-hidden hover:drop-shadow-3xl"
           >
             <img
               className="object-cover w-full"

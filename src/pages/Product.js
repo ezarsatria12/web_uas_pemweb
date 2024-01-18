@@ -16,63 +16,69 @@ import {
   TextField,
   useEffect,
 } from "react";
-const gt3rs = [
-  {
-    id: 1,
-    name: "911 GT3 RS",
-    href: "Models/911-gt3-rs",
-    imageSrc: "/assets/img_product/gt3rs.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$241,300",
-    topspeed: "296",
-  },
-  // More products...
-];
-const gt3 = [
-  {
-    id: 1,
-    name: "911 GT3",
-    href: "Models/911-gt3",
-    imageSrc: "/assets/img_product/gt3.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$182,900",
-    topspeed: "296",
-  },
-  // More products...
-];
-const turbo = [
-  {
-    id: 1,
-    name: "911 Turbo",
-    href: "/Models/911-turbo",
-    imageSrc: "/assets/img_product/turbo.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$197,200",
-    topspeed: "296",
-  },
-  {
-    id: 2,
-    name: "911 Turbo Cabrioret",
-    href: "/Models/911-turbo-cabrioret",
-    imageSrc: "/assets/img_product/turbocabrioret.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$210,000",
-    topspeed: "296",
-  },
-  {
-    id: 3,
-    name: "911 Turbo S",
-    href: "/Models/911-turbo-s",
-    imageSrc: "/assets/img_product/turbos.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$230,400",
-    topspeed: "296",
-  },
-
-  // More products...
-];
+const allPorscheModels = {
+  gt3rs: [
+    {
+      id: 1,
+      name: "911 GT3 RS",
+      href: "Models/911-gt3-rs",
+      imageSrc: "/assets/img_product/gt3rs.jpg",
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: "$241,300",
+      topspeed: "296",
+    },
+    // More products...
+  ],
+  gt3: [
+    {
+      id: 1,
+      name: "911 GT3",
+      href: "Models/911-gt3",
+      imageSrc: "/assets/img_product/gt3.jpg",
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: "$182,900",
+      topspeed: "296",
+    },
+    // More products...
+  ],
+  turbo: [
+    {
+      id: 1,
+      name: "911 Turbo",
+      href: "/Models/911-turbo",
+      imageSrc: "/assets/img_product/turbo.jpg",
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: "$197,200",
+      topspeed: "296",
+    },
+    {
+      id: 2,
+      name: "911 Turbo Cabrioret",
+      href: "/Models/911-turbo-cabrioret",
+      imageSrc: "/assets/img_product/turbocabrioret.jpg",
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: "$210,000",
+      topspeed: "296",
+    },
+    {
+      id: 3,
+      name: "911 Turbo S",
+      href: "/Models/911-turbo-s",
+      imageSrc: "/assets/img_product/turbos.jpg",
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: "$230,400",
+      topspeed: "296",
+    },
+    // More products...
+  ],
+};
 
 export default function Example() {
+  function Name(props) {
+    return <h2 className="text-3xl font-porsche font-semibold tracking-wide text-black">
+            {props.model}
+          </h2>;
+  }
   useEffect(() => {
     document.title = "Models - Porsche By Ezar Satria P";
     let link = document.querySelector("link[rel~='icon']");
@@ -111,15 +117,13 @@ export default function Example() {
         </div>
       </div>
       <div className="mx-10 my-10 md:mx-20 lg:mx-20">
-        {gt3rs == null ? (
+        {allPorscheModels.gt3rs == null ? (
           <h2 className="text-2xl font-bold tracking-tight text-black"></h2>
         ) : (
-          <h2 className="text-3xl font-porsche font-semibold tracking-wide text-black">
-            911 GT3 RS
-          </h2>
+          <Name model="911 GT3 RS"/>
         )}
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {gt3rs.map((product) => (
+          {allPorscheModels.gt3rs.map((product) => (
             <div key={product.id} className="group relative hover:bg-gray-100">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 ">
                 <img
@@ -149,15 +153,13 @@ export default function Example() {
         </div>
       </div>
       <div className="mx-10 my-10 md:mx-20 lg:mx-20">
-        {gt3 == null ? (
+        {allPorscheModels.gt3 == null ? (
           <h2 className="text-2xl font-bold tracking-tight text-gray-900"></h2>
         ) : (
-          <h2 className="text-3xl font-porsche font-semibold tracking-wide text-gray-900">
-            911 GT3 Models
-          </h2>
+          <Name model="911 GT3 Models"/>
         )}
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {gt3.map((product) => (
+          {allPorscheModels.gt3.map((product) => (
             <div key={product.id} className="group relative hover:bg-gray-100">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 ">
                 <img
@@ -187,15 +189,13 @@ export default function Example() {
         </div>
       </div>
       <div className="mx-10 my-10 md:mx-20 lg:mx-20">
-        {turbo == null ? (
+        {allPorscheModels.turbo == null ? (
           <h2 className="text-2xl font-bold tracking-tight text-gray-900"></h2>
         ) : (
-          <h2 className="text-3xl font-porsche font-semibold tracking-wide text-gray-900">
-            911 Turbo Models
-          </h2>
+          <Name model="911 Turbo Models"/>
         )}
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {turbo.map((product) => (
+          {allPorscheModels.turbo.map((product) => (
             <div key={product.id} className="group relative hover:bg-gray-100">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 ">
                 <img
