@@ -74,6 +74,10 @@ const allPorscheModels = {
 };
 
 export default function Example() {
+  const [index, setIndex] = useState(0);
+  function handleclick() {
+    alert("Sorry, button under construction");
+  }
   function Name(props) {
     return <h2 className="text-3xl font-porsche font-semibold tracking-wide text-black">
             {props.model}
@@ -107,6 +111,7 @@ export default function Example() {
               />
             </label>
             <button
+              onClick={handleclick}
               className="w-fit px-6 py-2.5  bg-black hover:bg-[#DA4B3B] text-base font-porsche font-semibold text-white rounded-sm"
               type="submit"
               value="Submit"

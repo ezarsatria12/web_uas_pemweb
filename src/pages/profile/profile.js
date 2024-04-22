@@ -17,6 +17,10 @@ import {
 import { LinkIcon } from "@heroicons/react/24/outline";
 
 export default function Example() {
+   const [index, setIndex] = useState(0);
+   function handleclick() {
+     alert("Sorry, button under construction");
+   }
   useEffect(() => {
     document.title = "Home - Porsche By Ezar Satria P";
     let link = document.querySelector("link[rel~='icon']");
@@ -58,7 +62,7 @@ export default function Example() {
                 </div>
               </div>
               <div class="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center">
-                <button class="text-white py-1 px-4 uppercase rounded bg-black hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
+                <button onClick={handleclick} class="text-white py-1 px-4 uppercase rounded bg-black hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
                   Edit
                 </button>
               </div>

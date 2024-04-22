@@ -7,6 +7,10 @@ const navigation = [
   { name: "About", href: "/About" },
 ];
 export default function Example() {
+  const [index, setIndex] = useState(0);
+  function handleclick() {
+    setIndex(index + 1);
+  }
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="">
